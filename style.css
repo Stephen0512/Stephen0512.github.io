@@ -1,0 +1,85 @@
+/* General */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: white;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+header h2 {
+    margin: 4px 0 10px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #555;
+}
+
+.institution {
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.contact a {
+    color: #0072c6;
+    text-decoration: none;
+}
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Profile picture */
+.profile-pic {
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #eee;
+}
+
+/* Sections */
+section {
+    margin-bottom: 35px;
+}
+
+section h3 {
+    font-size: 22px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 4px;
+    margin-bottom: 12px;
+}
+
+/* Lists */
+ul {
+    margin-top: 8px;
+}
+
+.pub-list li {
+    margin-bottom: 12px;
+}
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+}

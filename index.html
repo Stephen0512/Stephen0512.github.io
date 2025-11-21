@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Zhuohang (Stephen) Shen – CS PhD Student</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <img src="profile_photo.jpg" alt="Zhuohang Shen Profile Photo" class="profile-pic" />
+            <div>
+                <h1>Zhuohang (Stephen) Shen</h1>
+                <h2>Ph.D. Student, Computer Science</h2>
+                <p class="institution">Cornell University, Ithaca, NY</p>
+                <p class="contact">
+                    <a href="mailto:zhuohang@cs.cornell.edu">zhuohang@cs.cornell.edu</a>
+                    <span class="separator">·</span>
+                    <a href="https://github.com/Stephen0512">GitHub</a>
+                    <span class="separator">·</span>
+                    <a href="zhuohang_shen_cv.pdf">CV</a>
+                </p>
+            </div>
+        </header>
+
+        <!-- About -->
+        <!--
+        <section>
+            <h3>About Me</h3>
+            <p>
+                To be added...
+            </p>
+        </section>
+        -->
+
+        <!-- Research Interests -->
+        <section>
+            <h3>Research Interests</h3>
+            <ul>
+                <li>Software Testing</li>
+                <li>Runtime Verification</li>
+            </ul>
+        </section>
+
+        <!-- Publications -->
+        <!--
+        <section>
+            <h3>Publications</h3>
+            <ul id="pub-list" class="pub-list"></ul>
+        </section>
+        -->
+
+        <!-- Preprints -->
+        <!--
+        <section>
+            <h3>Preprints / Under Review</h3>
+            <ul id="preprint-list"></ul>
+        </section>
+        -->
+
+        <!-- Teaching -->
+        <section>
+            <h3>Teaching</h3>
+            <ul>
+                <li>Teaching Assistant, CS 5154 - Software Testing, Fall 2025</li>
+                <li>Grader, ECE 6760 - Memory Technologies and Memory-Centric Computing, Spring 2025</li>
+            </ul>
+        </section>
+
+        <footer>
+            © Zhuohang (Stephen) Shen — Updated Nov 2025
+        </footer>
+
+    </div>
+
+    <script>
+        /* Load publications.json */
+        fetch("publications.json")
+            .then(r => r.json())
+            .then(data => {
+                const pubList = document.getElementById("pub-list");
+
+                data.forEach(pub => {
+                    const li = document.createElement("li");
+
+                    let html = `
+                        <b>${pub.title}</b><br>
+                        ${pub.authors}<br>
+                        <i>${pub.venue}</i><br>
+                    `;
+
+                    const links = [];
+                    if (pub.pdf) links.push(`<a href="${pub.pdf}">PDF</a>`);
+                    if (pub.code) links.push(`<a href="${pub.code}">Code</a>`);
+                    if (pub.doi) links.push(`<a href="${pub.doi}">DOI</a>`);
+
+                    if (links.length > 0) {
+                        html += `[ ${links.join(" · ")} ]`;
+                    }
+
+                    li.innerHTML = html;
+                    pubList.appendChild(li);
+                });
+            })
+            .catch(err => console.error("Failed to load publications.json", err));
+    </script>
+
+</body>
+</html>

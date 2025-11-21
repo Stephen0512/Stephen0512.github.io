@@ -1,0 +1,15 @@
+[
+    {
+        "title": "Paper Title",
+        "authors": "Author1, Your Name, Author3",
+        "venue": "Conference Name (2025)",
+        "pdf": "paper.pdf",
+        "code": "https://github.com/yourrepo"
+    },
+    {
+        "title": "Another Paper",
+        "authors": "Your Name, Author2",
+        "venue": "Journal Name (2024)",
+        "pdf": "another.pdf"
+    }
+]
