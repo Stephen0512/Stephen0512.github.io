@@ -70,6 +70,25 @@ header h2 {
     flex-shrink: 0;
 }
 
+.email-svg {
+    height: 1.2em;
+    width: 7.8em;
+    margin: -0.2em 0;
+    vertical-align: middle;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 /* Sections */
 section {
     margin-bottom: 35px;

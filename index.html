@@ -21,7 +21,11 @@
                 <h2>Ph.D. Student, Computer Science</h2>
                 <p class="institution">Cornell University, Ithaca, NY</p>
                 <p class="contact">
-                    <a href="mailto:zhuohang@cs.cornell.edu"><i class="fas fa-envelope"></i> Email</a>
+                    <a href="#" id="email-link" class="email-link" aria-label="Email me">
+                        <i class="fas fa-envelope"></i>
+                        <object data="email.svg" type="image/svg+xml" class="email-svg" aria-hidden="true"></object>
+                        <span class="sr-only" id="email-text"></span>
+                    </a>
                     <span class="separator">·</span>
                     <a href="https://www.linkedin.com/in/zhuohang-shen-9b0765318"><i class="fab fa-linkedin"></i> LinkedIn</a>
                     <span class="separator">·</span>
@@ -95,8 +99,8 @@
 
     </div>
 
+    <!-- Publications -->
     <script>
-        /* Load publications.json */
         fetch("publications.json")
             .then(r => r.json())
             .then(data => {
@@ -126,6 +130,19 @@
             })
             .catch(err => console.error("Failed to load publications.json", err));
     </script>
+
+    <!-- Email -->
+    <script>
+        const user = "zhuohang";
+        const domain = "cs.cornell.edu";
+        const email = `${user}@${domain}`;
+      
+        const link = document.getElementById("email-link");
+        const text = document.getElementById("email-text");
+      
+        link.href = `mailto:${email}`;
+        text.textContent = email;
+      </script>
 
 </body>
 </html>
